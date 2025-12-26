@@ -162,8 +162,9 @@ using Robust.Shared.Toolshed;
 using Robust.Shared.Utility;
 using System.Linq;
 using static Content.Shared.Configurable.ConfigurationComponent;
-using Content.Shared._Impstation.Thaven.Components; // DeltaV
-using Content.Server._Impstation.Thaven; // DeltaV
+// DeltaV
+using Content.Server._Impstation.Thaven;
+using Content.Shared._Impstation.Thaven; // DeltaV
 
 namespace Content.Server.Administration.Systems
 {

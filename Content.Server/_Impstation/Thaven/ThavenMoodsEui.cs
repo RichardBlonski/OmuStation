@@ -4,7 +4,6 @@ using Content.Server.EUI;
 using Content.Shared.Administration;
 using Content.Shared.Eui;
 using Content.Shared._Impstation.Thaven;
-using Content.Shared._Impstation.Thaven.Components;
 
 namespace Content.Server._Impstation.Thaven;
 

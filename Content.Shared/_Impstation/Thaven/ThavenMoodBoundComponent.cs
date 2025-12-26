@@ -3,25 +3,25 @@ using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
 using Robust.Shared.Serialization;
 
-namespace Content.Shared._Impstation.Thaven.Components;
+namespace Content.Shared._Impstation.Thaven;
 
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
 [Access(typeof(SharedThavenMoodSystem))]
 public sealed partial class ThavenMoodsComponent : Component
 {
-    [DataField, ViewVariables(VVAccess.ReadWrite), AutoNetworkedField]
+    [DataField, AutoNetworkedField]
     public bool FollowsSharedMoods = true;
 
     [DataField, ViewVariables, AutoNetworkedField]
     public List<ThavenMood> Moods = new();
 
-    [DataField, ViewVariables(VVAccess.ReadWrite), AutoNetworkedField]
+    [DataField, AutoNetworkedField]
     public bool CanBeEmagged = true;
 
-    [DataField, ViewVariables(VVAccess.ReadWrite), AutoNetworkedField]
+    [DataField, AutoNetworkedField]
     public SoundSpecifier? MoodsChangedSound = new SoundPathSpecifier("/Audio/_Impstation/Thaven/moods_changed.ogg");
 
-    [DataField(serverOnly: true), ViewVariables]
+    [DataField]
     public EntityUid? Action;
 }
 

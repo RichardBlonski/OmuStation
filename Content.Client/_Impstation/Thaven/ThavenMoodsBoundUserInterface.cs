@@ -1,12 +1,8 @@
-﻿using Content.Client._Impstation.Thaven;
-using Content.Shared._Impstation.Thaven;
-using Content.Shared._Impstation.Thaven.Components;
-using JetBrains.Annotations;
+﻿using Content.Shared._Impstation.Thaven;
 using Robust.Client.UserInterface;
 
 namespace Content.Client._Impstation.Thaven;
 
-[UsedImplicitly]
 public sealed class ThavenMoodsBoundUserInterface : BoundUserInterface
 {
     [ViewVariables]

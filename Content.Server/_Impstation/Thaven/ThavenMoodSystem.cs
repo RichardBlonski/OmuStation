@@ -2,13 +2,11 @@
 using System.Linq;
 using Content.Server.Actions;
 using Content.Server.Chat.Managers;
-using Content.Shared.CCVar;
 using Content.Shared.Chat;
 using Content.Shared.Dataset;
 using Content.Shared.Emag.Systems;
 using Content.Shared.GameTicking;
 using Content.Shared._Impstation.Thaven;
-using Content.Shared._Impstation.Thaven.Components;
 using Content.Shared.Random;
 using Content.Shared.Random.Helpers;
 using Robust.Server.GameObjects;
@@ -125,10 +123,11 @@ public sealed partial class ThavenMoodsSystem : SharedThavenMoodSystem
 
         if (currentMoods == null)
             currentMoods = new HashSet<ThavenMood>();
+        var thavenMoods = currentMoods as ThavenMood[] ?? currentMoods.ToArray();
         if (conflicts == null)
-            conflicts = GetConflicts(currentMoods);
+            conflicts = GetConflicts(thavenMoods);
 
-        var currentMoodProtos = GetMoodProtoSet(currentMoods);
+        var currentMoodProtos = GetMoodProtoSet(thavenMoods);
 
         while (choices.Count > 0)
         {

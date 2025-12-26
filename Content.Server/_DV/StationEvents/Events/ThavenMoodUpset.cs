@@ -1,7 +1,7 @@
 ﻿using Content.Server._DV.StationEvents.Components;
 using Content.Server._Impstation.Thaven;
 using Content.Server.StationEvents.Events;
-using Content.Shared._Impstation.Thaven.Components;
+using Content.Shared._Impstation.Thaven;
 using Content.Shared.GameTicking.Components;
 
 namespace Content.Server._DV.StationEvents.Events;
